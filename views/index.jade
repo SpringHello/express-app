@@ -6,7 +6,9 @@ block content
       header
         h1 javascript技术博客
       main(id='articleList')
+        p 最新文章
+        p #{articleList[0].content}
         ul
           - for(var i=0;i<articleList.length;i++){
-          li #{articleList[i]}
+          li #{articleList[i].title}
           - }
