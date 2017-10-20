@@ -1,51 +1,92 @@
-h1,h2,h3,h4,h5,h6{
-  margin:0px;
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px;
 }
-ul{
-  padding:0px;
-  margin:0px;
+
+ul {
+  padding: 0px;
+  margin: 0px;
 }
-li{
+
+li {
   list-style-type: none;
 }
 
-html{
+html {
   font-size: 12px;
+  //font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
   body {
     font-family: Georgia, serif;
     margin: 0px;
-
-
-
-    #container{
-      max-width:960px;
-      margin:0px auto;
+    #container {
+      max-width: 960px;
+      margin: 0px auto;
 
       @media (max-width: 48rem) {
         width: 96%;
       }
 
-      header{
-        height:5rem;
+      header {
+        height: 5rem;
         display: flex;
         align-items: center;
-        h1{
-          font-size:2rem;
-          color:#556677
+        h1 {
+          font-size: 2rem;
+          color: #556677
         }
       }
-      #articleList{
-        &>p{
-          font-size:1.6rem;
+      #articleList {
+        .not-display {
+          display: none;
         }
-        ul{
-          margin-left:1.5rem
+        & > p {
+          font-size: 1.6rem;
         }
+        #content {
+          max-height: 10rem;
+          position: relative;
+          overflow: hidden;
+          & > p {
+            font-size: 1.6rem;
+            line-height: 2.3rem;
+          }
+          #mask {
+            width: 100%;
+            height: 10rem;
+            position: absolute;
+            bottom: 0px;
+            background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff);
+          }
+        }
+        #removeMask {
+          text-align: center;
+          padding: 1rem 0rem;
+          cursor: pointer;
+          &.not-display {
+            display: none;
+          }
+          & > span {
+            font-size: 1.5rem;
+            color: #2d8cf0;
+          }
+        }
+        #newArticle {
+          font-size: 1.6rem;
+          font-weight: bold;
+        }
+        #more {
+          margin-left: 1.5rem;
+          margin-top: .5rem;
+          li {
+            font-size: 1.3rem;
+            line-height: 3.2rem;
+            color: #2d8cf0;;
+          }
+        }
+
       }
     }
   }
 }
-
 
 a {
   color: #00B7FF;

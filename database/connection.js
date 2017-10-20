@@ -4,7 +4,7 @@
 const mysql = require('mysql')
 
 var connection = mysql.createConnection({
-    host     : 'localhost',
+    host     : '192.168.3.244',
     user     : 'root',
     password : 'root',
     database : 'express'

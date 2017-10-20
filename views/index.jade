@@ -6,9 +6,16 @@ block content
       header
         h1 javascript技术博客
       main(id='articleList')
-        p 最新文章
-        p #{articleList[0].content}
-        ul
+        p #{articleList[0].title}
+        div(id='content')
+          p #{articleList[0].content}
+          div(id='mask')
+        div(id='removeMask')
+          span 阅读全文
+        span(id='newArticle') 最新文章
+        ul(id='more')
           - for(var i=0;i<articleList.length;i++){
           li #{articleList[i].title}
           - }
+  script(src="http://code.jquery.com/jquery-latest.js")
+  script(src="/script/common.js")
