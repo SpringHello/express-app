@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  div(id='background')
+    div(id='container')
+      header
+        h1 javascript技术博客
+      main(id='articleList')
+        h1 #{article[0].title}
+        div(id='content',style='max-height:none')
+          article !{article[0].content}
+  script(src="http://code.jquery.com/jquery-latest.js")
+  script(src="/script/common.js")

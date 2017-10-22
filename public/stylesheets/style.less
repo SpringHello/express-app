@@ -29,6 +29,7 @@ html {
         height: 5rem;
         display: flex;
         align-items: center;
+        border-bottom:1px solid black;
         h1 {
           font-size: 2rem;
           color: #556677
@@ -38,16 +39,21 @@ html {
         .not-display {
           display: none;
         }
-        & > p {
-          font-size: 1.6rem;
+        & > h1 {
+          font-size: 1.9rem;
+          margin:1rem 0rem;
+          font-weight: 400;
         }
         #content {
           max-height: 10rem;
           position: relative;
           overflow: hidden;
-          & > p {
+          & > article {
             font-size: 1.6rem;
             line-height: 2.3rem;
+            p{
+              margin-top:0rem;
+            }
           }
           #mask {
             width: 100%;
