@@ -1,7 +1,11 @@
 h1, h2, h3, h4, h5, h6 {
   margin: 0px;
 }
-
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 ul {
   padding: 0px;
   margin: 0px;
@@ -17,78 +21,108 @@ html {
   body {
     font-family: Georgia, serif;
     margin: 0px;
+    #background{
+      background-color: #f8f9f9;
+    }
     #container {
-      max-width: 960px;
-      margin: 0px auto;
-
-      @media (max-width: 48rem) {
-        width: 96%;
+      width: 960px;
+      margin: 0rem auto;
+      @media (max-width: 960px) {
+        width: 97%;
       }
-
       header {
         height: 5rem;
         display: flex;
         align-items: center;
-        border-bottom:1px solid black;
+        border-bottom: 1px solid black;
         h1 {
           font-size: 2rem;
           color: #556677
         }
       }
-      #articleList {
-        .not-display {
-          display: none;
-        }
-        & > h1 {
-          font-size: 1.9rem;
-          margin:1rem 0rem;
-          font-weight: 400;
-        }
-        #content {
-          max-height: 10rem;
-          position: relative;
-          overflow: hidden;
-          & > article {
-            font-size: 1.6rem;
-            line-height: 2.3rem;
-            p{
-              margin-top:0rem;
-            }
-          }
-          #mask {
+      .main {
+        margin-top:20px;
+        position:relative;
+        #articleList {
+          box-sizing:border-box;
+          background-color: #fff;
+          width: 700px;
+          padding:10px 20px;
+          @media (max-width: 960px) {
             width: 100%;
-            height: 10rem;
-            position: absolute;
-            bottom: 0px;
-            background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff);
           }
-        }
-        #removeMask {
-          text-align: center;
-          padding: 1rem 0rem;
-          cursor: pointer;
-          &.not-display {
+          .not-display {
             display: none;
           }
-          & > span {
-            font-size: 1.5rem;
-            color: #2d8cf0;
+          & > h1 {
+            font-size: 1.9rem;
+            margin: 1rem 0rem;
+            font-weight: 400;
+          }
+          #content {
+            max-height: 10rem;
+            position: relative;
+            overflow: hidden;
+            & > article {
+              font-size: 1.6rem;
+              line-height: 2.3rem;
+              p {
+                margin-top: 0rem;
+              }
+            }
+            #mask {
+              width: 100%;
+              height: 10rem;
+              position: absolute;
+              bottom: 0px;
+              background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0), #fff);
+            }
+          }
+          #removeMask {
+            text-align: center;
+            padding: 1rem 0rem;
+            cursor: pointer;
+            &.not-display {
+              display: none;
+            }
+            & > span {
+              font-size: 1.5rem;
+              color: #2d8cf0;
+            }
+          }
+          #newArticle {
+            margin-top:20px;
+            font-size: 1.6rem;
+            font-weight: bold;
+            display: inline-block;
+          }
+          #more {
+            margin-left: 1.5rem;
+            margin-top: .5rem;
+            li {
+              font-size: 1.3rem;
+              line-height: 3.2rem;
+              color: #2d8cf0;;
+            }
           }
         }
-        #newArticle {
-          font-size: 1.6rem;
-          font-weight: bold;
-        }
-        #more {
-          margin-left: 1.5rem;
-          margin-top: .5rem;
-          li {
-            font-size: 1.3rem;
-            line-height: 3.2rem;
-            color: #2d8cf0;;
+        .classification {
+          width: 240px;
+          position:absolute;
+          padding:20px;
+          top:0px;
+          right:0px;
+          background-color: #fff;
+          @media (max-width: 960px) {
+            position:relative;
+            width: 100%;
+            border-top:1px solid rgb(241,241,241);
+          }
+          #articleType {
+            font-size: 1.6rem;
+            font-weight: bold;
           }
         }
-
       }
     }
   }

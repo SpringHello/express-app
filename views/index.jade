@@ -5,19 +5,29 @@ block content
     div(id='container')
       header
         h1 javascript技术博客
-      main(id='articleList')
-        h1 #{articleList[0].title}
-        div(id='content')
-          article !{articleList[0].content}
-          div(id='mask')
-        div(id='removeMask')
-          span 阅读全文
-        span(id='newArticle') 最新文章
-        ul(id='more')
-          - for(var i=1;i<articleList.length;i++){
-          li
-            a(href='#{articleList[i].target}') #{articleList[i].title}
-          - }
+      .main
+        main(id='articleList')
+          h1 #{articleList[0].title}
+          div(id='content')
+            article !{articleList[0].content}
+            div(id='mask')
+          div(id='removeMask')
+            span 阅读全文
+          h1(id='newArticle') 最新文章
+          ul(id='more')
+            - for(var i=1;i<articleList.length;i++){
+            li
+              a(href='#{articleList[i].target}') #{articleList[i].title}
+            - }
+        .classification
+          h1(id='articleType') 文章分类
+            ul(id='more')
+              li
+                a(href='http://www.baidu.com') javascript
+              li
+                a(href='http://www.baidu.com') javascript
+              li
+                a(href='http://www.baidu.com') javascript
   script(src="http://code.jquery.com/jquery-latest.js")
   script(src="/script/common.js")
 
