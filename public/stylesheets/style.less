@@ -24,24 +24,33 @@ html {
     #background{
       background-color: #f8f9f9;
     }
+    #header{
+      background-color: #fff;
+      border-bottom: 1px solid rgb(241, 241, 241);
+      header {
+        width: 960px;
+        margin: 0rem auto;
+        height: 5rem;
+        display: flex;
+        align-items: center;
+        @media (max-width: 960px) {
+          width: 97%;
+        }
+        h1 {
+          font-size: 2rem;
+          color: #556677
+        }
+      }
+    }
     #container {
       width: 960px;
       margin: 0rem auto;
       @media (max-width: 960px) {
         width: 97%;
       }
-      header {
-        height: 5rem;
-        display: flex;
-        align-items: center;
-        border-bottom: 1px solid black;
-        h1 {
-          font-size: 2rem;
-          color: #556677
-        }
-      }
+
       .main {
-        margin-top:20px;
+        margin-top:15px;
         position:relative;
         #articleList {
           box-sizing:border-box;
@@ -114,13 +123,27 @@ html {
           right:0px;
           background-color: #fff;
           @media (max-width: 960px) {
-            position:relative;
+            position:relative !important;
+            top:0px !important;
+            left:0px !important;
             width: 100%;
             border-top:1px solid rgb(241,241,241);
+          }
+          &.fixed{
+            position:fixed;
           }
           #articleType {
             font-size: 1.6rem;
             font-weight: bold;
+            #more {
+              margin-left: 1.5rem;
+              margin-top: .5rem;
+              li {
+                font-size: 1.3rem;
+                line-height: 3.2rem;
+                color: #2d8cf0;;
+              }
+            }
           }
         }
       }
