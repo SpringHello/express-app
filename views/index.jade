@@ -5,6 +5,10 @@ block content
     div(id='header')
       header
         h1 javascript技术博客
+        div(id="auth")
+          span(id="login") 登录
+          span(style="vertical-align: text-bottom;margin:0rem .2rem;") |
+          span(id="sign") 注册
     div(id='container')
       .main
         main(id='articleList')
@@ -24,11 +28,7 @@ block content
           h1(id='articleType') 文章分类
             ul(id='more')
               li
-                a(href='http://www.baidu.com') javascript
-              li
-                a(href='http://www.baidu.com') javascript
-              li
-                a(href='http://www.baidu.com') javascript
+                a(href='/category/javascript') javascript
   script(src="/script/jquery-3.2.1.min.js")
   script(src="/script/common.js")
 

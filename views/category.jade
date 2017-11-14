@@ -8,9 +8,11 @@ block content
     div(id='container')
       .main
         main(id='articleList')
-          h1 #{article.title}
-          div(id='content',style='max-height:none')
-            article !{article.content}
+          ul
+            - for(var i=1;i<articleList.length;i++){
+            li
+              a(href='#{articleList[i].target}') #{articleList[i].title}
+            - }
         .classification
           h1(id='articleType') 文章分类
             ul(id='more')
