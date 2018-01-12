@@ -15,7 +15,6 @@ router.get('/:type', function (req, res, next) {
         } else {
             res.render('category', {articleList: rows});
         }
-
     });
 });
 
