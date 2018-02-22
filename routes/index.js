@@ -7,7 +7,7 @@ var query = (function () {
     var status = "ready"
     var proxy = new eventEmitter()
     return function (req, res, next) {
-        res.setHeader('Content-type', 'text/json')
+        res.setHeader('Content-type', 'text/html')
         proxy.once("select", function (rows) {
             res.render('index', {articleList: rows});
         })
